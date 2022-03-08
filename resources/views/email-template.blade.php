@@ -17,6 +17,7 @@
             <p>Email: {{$details['email']}}</p>
             <p>Phone: {{$details['phone']}}</p>
             <p>Address: {{$details['address']}}</p>
+            <p>Service-Type: {{$details['service']}}</p>
             <p>Message: {{$details['message']}}</p>
         </div>
     </div>

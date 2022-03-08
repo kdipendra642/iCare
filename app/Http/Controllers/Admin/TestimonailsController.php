@@ -19,7 +19,7 @@ class TestimonailsController extends BaseController
 
     public function __construct() {
         $this->model = new Testimonials();
-        $this->folder_path = public_path() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'testimonials' . DIRECTORY_SEPARATOR;
+        $this->folder_path = getcwd() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'testimonials' . DIRECTORY_SEPARATOR;
         
     }
    

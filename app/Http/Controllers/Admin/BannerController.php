@@ -18,7 +18,7 @@ class BannerController extends BaseController
 
     public function __construct() {
         $this->model = new Banner();
-        $this->folder_path = public_path() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'banner' . DIRECTORY_SEPARATOR;
+        $this->folder_path = getcwd() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'banner' . DIRECTORY_SEPARATOR;
         
     }
    

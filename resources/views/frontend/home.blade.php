@@ -2,32 +2,32 @@
 @section('content')
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
-
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="{{ asset('frontend/20220129-1_1080p(1).mp4')}}" type="video/mp4" style="opacity: 0.6;">
-    </video>
+  <section id="hero" class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center" style="background-size: cover;">
+    <img src="{{ asset('frontend/background-img.png') }}" alt="{{ $setting->site_title}}" style="width: 100%; height: 100%;">
 
 
     <div class="hero-container" data-aos="zoom-in">
       <h1> Grow Your Business!!!</h1>
       <!-- <h2>Instantly match with verified, expert IT agencies</h2> -->
       <h2>Find the best service provider for -
-        <span class="txt-rotate" style="color:#327ab8;font-size: 36px; font-weight: bold;" data-period="2000"
+        <span class="txt-rotate" style="color:#F9F20E;font-size: 36px; font-weight: bold;" data-period="2000"
           data-rotate='[ 
               "Web Design",
               "Website Developement", 
               "Application Development", 
               "Digital Marketing", "SEO" ]'></span>
       </h2>
-      <a href="{{ route('customer.career')}}" class="btn-get-started scrollto rounded">Join Us</a>
+      <!-- <a href="{{ route('customer.career')}}" class="btn-get-started scrollto rounded">Join Us</a> -->
+      <a href="#" id="" data-toggle="modal" data-target="#contactForm" class="btn-get-started scrollto rounded">Get Quote</a>
 
     </div>
   </section>
+          <!-- modal -->
+          @include('frontend.includes.modal')
   <!-- End Hero -->
+  @include('frontend.includes.header')
 
   <!-- ======= Header ======= -->
- @include('frontend.includes.header')
   <!-- End Header -->
   <!-- Services we offer -->
   <section  style="margin-top: 100px;">
@@ -136,7 +136,7 @@
                 </ul>
               </div>
               <div class="col-md-12 text-center " style="margin-bottom:25px; top: 20px;">
-                <a href="#" data-toggle="modal" data-target="#myModal" class="mt-4  hello-btn hello-cta shadow"
+                <a href="#" data-toggle="modal" data-target="#contactForm" class="mt-4  hello-btn hello-cta shadow"
                   style="margin: 0 auto; font-weight: 500;"><i class="las la-phone-volume mr-2"></i> Book A Free
                   Consultation</a>
               </div>
@@ -256,7 +256,9 @@
             @foreach($client as $clients)
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
                 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-                <img src="{{ asset('image/client/'.$clients->image)}}" class="img-fluid" alt="{{$clients->title}}">
+                <a href="{{ $clients->url}}" target="_blank">
+                  <img src="{{ asset('image/client/'.$clients->image)}}" class="img-fluid" alt="{{$clients->title}}">
+                </a>
                 </div>
             @endforeach
           </div>
@@ -305,56 +307,16 @@
               <p style="line-height: 31px; text-align: center;" class="col-md-9"><span class="consulation_para ">
                   Book your free consultation right now and get the best advice in a matter of just 20 minutes!
                 </span></p>
-              <a href="#" id="lp-pom-button-336" data-toggle="modal" data-target="#myModal" class="mt-4">Book a Free
-                Consultation</a>
+              <a href="#" id="lp-pom-button-336" data-toggle="modal" data-target="#contactForm" class="mt-4">Get Quote</a>
             </div>
           </div>
 
         </div>
       </div>
       <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-lg p-5 pt-0 mt-0 mb-5">
-          <div class="modal-content">
-            <div class="contact-area-bg">
-              <div class="row">
-                <div class="col-md-12 text-center" style="margin-top: 20px;">
-                  <h3 class="consulting_title">How Can We <span style="color:#01b0f8;"> Help You</span>?</h3>
-                </div>
-
-                <div class="col-lg-6 pt-4 consulting_form">
-                  <div class="contact-form ">
-                      <strong>Feel Free to contact us.</strong>
-                      <input type="hidden" name="csrfmiddlewaretoken" value="#">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <strong>Phone:</strong> +977 {{$setting->contact_phone}}<br>
-                            <div class="help-block with-errors"></div>
-                          </div>
-                        </div>
-
-                        <div class="col-md-12">
-                          <div class="form-group">
-                              <strong>Email:</strong> {{$setting->contact_email}}<br>
-                            <div class="help-block with-errors"></div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-md-6 text-right">
-
-                  <img src="{{ asset('frontend/Assets/static/img/popin.svg')}}" width="325px" class="consulting_img_mb" />
-                </div>
-
-                <span class="" style="position: absolute; top: 20px; right: 20px;"><i class="fa fa-times"
-                    data-dismiss="modal" style="cursor: pointer;"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     @include('frontend.includes.modal')
       </div>
     </section>
+
+    
 @endsection

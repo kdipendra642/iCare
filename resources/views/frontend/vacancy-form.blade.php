@@ -271,14 +271,6 @@ button#apply_now:focus {
     </div>
 @endif
 
-@if(count($success))
-    <div class="alert alert-danger">
-        <p class="alert alert-danger">
-            {{ $success }}
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>	
-        </p>
-    </div>
-@endif
 <section class="bg-image">
   <div class="container apply-form">
       <div class="row">

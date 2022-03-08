@@ -655,7 +655,7 @@
 
     <!-- Footer -->
     <footer id="footer" >
-      <div class="footer-top" style="background: #114e91;">
+      <div class="footer-top" style="background: #053281;">
         <div class="container">
           <div class="row">
 
@@ -703,12 +703,12 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom" style="background: #052d72;">
         <div class="container">
           <div class="row d-flex align-items-center">
             <div class="col-lg-6 text-lg-left text-center">
               <div class="copyright">
-                Copyright © 2021 <strong>iCare. </strong> All Rights Reserved.
+                Copyright © 2021 <strong>iCare. </strong> All Rights Reserved. Designed and Developed by:  <a href="#">Prabidhi Enterpriese.</a> 
               </div>
             </div>
             <div class="col-lg-6">
@@ -819,10 +819,6 @@
 
       })
     </script>
-
-
-
-
 
 
     <!-- new js -->

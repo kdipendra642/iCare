@@ -42,6 +42,7 @@ class ContactController extends Controller
         $details->email = $request->input('email');
         $details->phone = $request->input('phone');
         $details->address = $request->input('address');
+        $details->service = $request->input('service');
         $details->message = $request->input('message');
         $details->status = $request->input('status') == TRUE ? '1' : '0';
 

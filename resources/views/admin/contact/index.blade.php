@@ -25,6 +25,8 @@
                             <th >Name</th>
                             <th >Email</th>
                             <th >Phone</th>
+                            <th >Address</th>
+                            <th >Service-Type</th>
                             <th >Message</th>
                             <th >Status</th>
                             <th >Action</th>
@@ -37,6 +39,8 @@
                                 <td>{{$con->name}}</td>
                                 <td>{{$con->email}}</td>
                                 <td>{{$con->phone}}</td>
+                                <td>{{$con->address}}</td>
+                                <td>{{$con->service}}</td>
                                 <td>{!! str_limit($con->message, 100) !!}</td>
                                 <td width="25px" class="hidden-phone ">
                                     @if($con->status == "1")

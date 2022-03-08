@@ -91,6 +91,11 @@
           <div class="col-12 text-center w-100" style="margin-top:50px; margin-bottom:50px;">
               <div class="form-row gallery text-center"> <!-- grid - class -->
                   <div class="col-lg-4 col-sm-6 mb-4 grid-item tech">
+                    @if (count($careers) == 0)
+                      <div>
+                        <h6>Currenly there are no vacancies.</h6>
+                      </div>
+                    @endif
 
                       @foreach($careers as $career)
                       <div class="card p-4 mb-4 mb-xl-0 shadow" style="width:350px; height:300px;">

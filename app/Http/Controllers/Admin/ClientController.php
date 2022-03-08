@@ -14,11 +14,12 @@ class ClientController extends BaseController
     protected $panel = 'Client';
     protected $folder_path;
     protected $model;
+    // protected $prefix_path_image = '/image/client/';
 
 
     public function __construct() {
         $this->model = new Client();
-        $this->folder_path = public_path() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'client' . DIRECTORY_SEPARATOR;
+        $this->folder_path = getcwd() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'client' . DIRECTORY_SEPARATOR;
         
     }
    

@@ -18,7 +18,7 @@ class TechnologyController extends BaseController
 
     public function __construct() {
         $this->model = new Technology();
-        $this->folder_path = public_path() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'technology' . DIRECTORY_SEPARATOR;
+        $this->folder_path = getcwd() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'technology' . DIRECTORY_SEPARATOR;
         
     }
    

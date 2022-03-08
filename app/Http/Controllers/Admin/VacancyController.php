@@ -22,7 +22,7 @@ class VacancyController extends BaseController
 
     public function __construct() {
         $this->model = new Vacancy();
-        $this->folder_path = public_path() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'vacancy' . DIRECTORY_SEPARATOR;
+        $this->folder_path = getcwd() . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR . 'vacancy' . DIRECTORY_SEPARATOR;
     }
 
     public function index()
